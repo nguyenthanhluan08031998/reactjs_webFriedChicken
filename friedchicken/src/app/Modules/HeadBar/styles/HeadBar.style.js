@@ -10,7 +10,7 @@ const styles = theme => ({
       display: 'block',
     },
   },
-  
+
   root: {
     width: '100%',
     flexGrow: 1,
@@ -60,15 +60,16 @@ const styles = theme => ({
     fontWeight: 'fontWeightBold',
   },
   BottomNavigation: {
+    display: 'flex',
+    justifyContent: 'space-around',
     backgroundColor: '#ff9900',
     width: '*',
-    height:'80px',
-    fontSize:16,
-    fontWeight: 'fontWeightBold',
+    height: '80px',
   },
-  BottomNavigationAction:{
-    fontWeight: 'fontWeightBold',
-    fontSize:16,
+  BottomNavigationAction: {
+    width:'140px',
+    height: '80px',
+    textTransform: 'uppercase',
   }
 });
 export default styles;

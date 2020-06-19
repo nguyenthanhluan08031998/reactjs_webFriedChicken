@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 export const useItem = (props) => {
     const { history } = props;
     const [valueBottomNavigation, setBottomNavigation] = useState(0);
-    const  OnChangeBottomNavigation = (e, value) =>{
+    const  onChangeBottomNavigation = (e, value) =>{
         setBottomNavigation(value)
         if(value=="0"){
             history.replace(`/home`);
@@ -19,8 +19,12 @@ export const useItem = (props) => {
             history.push(`/store`);
         }
     }
+    const onLogin = () =>{
+        history.push(`/login`)
+    }
     return{
         valueBottomNavigation,
-        OnChangeBottomNavigation
+        onChangeBottomNavigation,
+        onLogin
     }
 }

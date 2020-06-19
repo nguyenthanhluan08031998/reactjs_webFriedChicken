@@ -33,5 +33,13 @@ export const appRoutes = [
       path: "/introduce",
       component: getComponent("./app/Modules/HeadBar/components/Introduce")
    },
+   {
+      path:"/login",
+      component: getComponent("./app/Modules/Login/components/Login")
+   },
+   {
+      path:"/register",
+      component: getComponent("./app/Modules/Register/components/Register")
+   },
    { redirect: true, path: "/", to: '/home' }
 ];

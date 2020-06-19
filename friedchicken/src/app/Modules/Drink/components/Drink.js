@@ -1,11 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';//css
-import styles from '../styles/Food.style';//css
+import styles from '../styles/Drink.style';//css
 import { Grid } from '@material-ui/core';
-import { useItem } from '../hooks/FoodHook';
+import { useItem } from '../hooks/DrinkHook';
 import Card from '../../../../components/Card/Card'
 const useStyles = makeStyles(styles);
-const Food = (props) => {
+const Drink = (props) => {
     // const { submitFailes, history, location, initialize, handleSubmit, notification } = props;
     const {
         data
@@ -25,4 +25,4 @@ const Food = (props) => {
         </Grid>
     );
 }
-export default Food;
+export default Drink;

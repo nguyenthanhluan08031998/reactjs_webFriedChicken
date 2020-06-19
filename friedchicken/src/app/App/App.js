@@ -7,6 +7,8 @@ import HeadBar from '../Modules/HeadBar/components/HeadBar';
 import { useTranslation } from "react-i18next";
 import NotificationOption from "../../components/Notification/RenderNotification";
 import FootBar from '../Modules/FootBar/components/FootBar'
+import { Grid } from '@material-ui/core';
+
 function App({ enqueueSnackbar, history }) {
   const { t } = useTranslation()
   const notification = (content, type) => {
@@ -15,7 +17,7 @@ function App({ enqueueSnackbar, history }) {
   return (
     <div className="App">
       <HeadBar history={history}></HeadBar>
-      <Container>
+      <Grid>
         <Suspense fallback={null}>
           <Switch>
             {appRoutes.map((prop, key) => {
@@ -24,7 +26,7 @@ function App({ enqueueSnackbar, history }) {
             })}
           </Switch>
         </Suspense>
-      </Container>
+      </Grid>
       <FootBar></FootBar>
     </div>
   );

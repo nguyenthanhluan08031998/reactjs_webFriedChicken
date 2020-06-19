@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
 
 //Đường dẫn API
 app.use('/api/food', require('./controllers/FoodController'))
+app.use('/api/drink', require('./controllers/DrinkController'))
 app.listen(PORT, () => {
     console.log(`API is running in Port ${PORT}`)
 })
