@@ -4,31 +4,32 @@ import { Grid } from '@material-ui/core'
 function Home(props) {
   var items = [
     {
-      image: '/1.png'
+      image: 'http://localhost:5001/image/Home1.jpg'
     },
     {
-      image: '/1.png'
+      image: 'http://localhost:5001/image/promo_2006_m2t3-v.jpg'
     },
     {
-      image: '/1.png'
+      image: 'http://localhost:5001/image/promo_1000x400_m1t1.jpg'
     },
     {
-      image: '/1.png'
-    }
+      image: 'http://localhost:5001/image/promo_1804_happyhour.jpg'
+    },
+    
   ]
   var itemHome = [
     {
-      image: 'http://localhost:5001/image/imageFood/Home1.jpg'
+      image: 'http://localhost:5001/image/Home1.jpg'
     },
     {
-      image: 'http://localhost:5001/image/imageFood/Home2.jpg'
+      image: 'http://localhost:5001/image/Home2.jpg'
     },
     {
-      image: 'http://localhost:5001/image/imageFood/Home3.jpg'
+      image: 'http://localhost:5001/image/Home3.jpg'
     },
   ]
   return (
-    <Grid>
+    <Grid fullWidth style={{marginTop:100}}>
       <Carousel>
         {
           items.map(item => <Item item={item} />)
@@ -44,7 +45,7 @@ function Home(props) {
 
 function Item(props) {
   return (
-    <Grid>
+    <Grid >
       <img src={props.item.image}></img>
     </Grid>
   )

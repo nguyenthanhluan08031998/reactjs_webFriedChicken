@@ -13,6 +13,7 @@ const styles = theme => ({
     
     root: {
       marginTop:50,
+      minHeight:500,
     },
   });
   export default styles;

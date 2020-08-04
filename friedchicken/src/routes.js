@@ -41,5 +41,33 @@ export const appRoutes = [
       path:"/register",
       component: getComponent("./app/Modules/Register/components/Register")
    },
+   {
+      path:"/login/facebook",
+      component: getComponent("./app/Modules/Login/components/LoginFacebook")
+   },
+   {
+      path:"/login/google",
+      component: getComponent("./app/Modules/Login/components/LoginGoogle")
+   },
+   {
+      path:"/manager",
+      component:getComponent("./app/Modules/Manager/components/Main")
+   },
+   {
+      path:"/manager/managerproduct",
+      component: getComponent("./app/Modules/Manager/components/ManagerProduct")
+   },
+   {
+      path:"/managercustomer",
+      component:getComponent("./app/Modules/ManagerCustomer/components/Main")
+   },
+   // {
+   //    path:"/managercustomer/Manageruser",
+   //    component:getComponent("./app/Modules/ManagerCustomer/components/ManagerCart")
+   // },
+   // {
+   //    path:"/managercustomer/ManagerCart",
+   //    component:getComponent("./app/Modules/ManagerCustomer/components/ManagerUser")
+   // },
    { redirect: true, path: "/", to: '/home' }
 ];

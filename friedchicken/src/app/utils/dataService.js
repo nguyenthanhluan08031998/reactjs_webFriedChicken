@@ -90,27 +90,27 @@ export const getFunction = (url, func) => {
         });
 }
 
-// export const postFunction = (url, func, data) => {
-//     numberOfAjaxCAllPending++;
-//     var configHTTP = {
-//         url: `${APIUrl}${url}/${func}`,
-//         method: 'POST',
-//         data
-//     };
-//     return axios(configHTTP)
-//         .then((response) => {
-//             return response.data;
-//         })
-//         .catch((error) => {
-//             console.log(error)
-//             return null
-//         });
-// }
+export const postFunction = (url, func, data) => {
+    //numberOfAjaxCAllPending++;
+    var configHTTP = {
+        url: `${APIUrl}${url}/${func}`,
+        method: 'POST',
+        data
+    };
+    return axios(configHTTP)
+        .then((response) => {
+            return response.data;
+        })
+        .catch((error) => {
+            console.log(error)
+            return null
+        });
+}
 
-// export const getURLParamsKey = (url, key) => {
-//     let params = new URLSearchParams(url);
-//     return params.get(key);
-// };
+export const getURLParamsKey = (url, key) => {
+    let params = new URLSearchParams(url);
+    return params.get(key);
+};
 
 
 // var numberOfAjaxCAllPending = 0;

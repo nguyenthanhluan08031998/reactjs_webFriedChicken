@@ -31,24 +31,24 @@ const useStyles = makeStyles((theme) => ({
         fontSize: 'large',
     },
 }));
-export default function RecipeReviewCard({image, name, price}) {
+export default function RecipeReviewCard({item, onAddProductIntCart}) {
     const classes = useStyles();
     return (
         <Card className={classes.root}>
             <CardMedia
                 className={classes.media}
-                image={image}
+                image={item.Image}
                 title="Paella dish"
             />
             <CardContent className={classes.CardContent}>
                 <Typography className={classes.Typography} variant="body2" color="textSecondary" component="p" style={{color:'#ff9900'}}>
-                    {name}
+                    {item.Name}
                 </Typography>
                 <Typography className={classes.Typography} variant="body2" color="textSecondary" component="p" style={{color:'#008000'}}>
-                    {price}đ
+                    {new Intl.NumberFormat().format(item.Price)}đ
                 </Typography>
                 <IconButton>
-                    <ShoppingCartIcon className={classes.iconShopping} style={{color:'#cc3300'}}/>
+                    <ShoppingCartIcon className={classes.iconShopping} style={{color:'#cc3300'}} onClick={onAddProductIntCart(item)}/>
                 </IconButton>
             </CardContent>
 

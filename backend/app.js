@@ -16,6 +16,11 @@ app.get('/', (req, res) => {
 //Đường dẫn API
 app.use('/api/food', require('./controllers/FoodController'))
 app.use('/api/drink', require('./controllers/DrinkController'))
+app.use('/api/login', require('./controllers/LoginController'))
+app.use('/api/register', require('./controllers/RegisterController'))
+app.use('/api/managerproduct', require('./controllers/ManagerProductController'))
+app.use('/api/headbar', require('./controllers/HeadBarController'))
+app.use('/api/cart', require('./controllers/CartController'))
 app.listen(PORT, () => {
     console.log(`API is running in Port ${PORT}`)
 })
